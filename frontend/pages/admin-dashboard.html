@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quantum Travels | Admin Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/theme.css" />
+    <script src="../assets/js/theme.js"></script>
+  </head>
+  <body>
+    <header class="site-header page-header">
+      <nav class="navbar container">
+        <a class="brand" href="homepage-5.html" aria-label="Quantum Travels home">
+          <img class="brand-logo brand-logo--dark" src="../assets/images/quantum-logo-dark.png" alt="Quantum Travels" />
+          <img class="brand-logo brand-logo--light" src="../assets/images/quantum-logo-light.png" alt="" aria-hidden="true" />
+        </a>
+        <div class="nav-links">
+          <a href="homepage-5.html">Home</a>
+          <a href="tour-grid-01.html">Tours</a>
+          <a href="contactus.html">Contact</a>
+          <button id="signOutButton" class="btn btn-primary small-btn" type="button">Sign Out</button>
+          <button class="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Switch to dark mode" data-theme-toggle>
+            <span class="theme-toggle-label theme-toggle-label--light">Light</span>
+            <span class="theme-toggle-track" aria-hidden="true"><span class="theme-toggle-thumb"></span></span>
+            <span class="theme-toggle-label theme-toggle-label--dark">Dark</span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container admin-shell">
+      <div class="section-heading left-aligned">
+        <span class="eyebrow">Operations</span>
+        <h2>Admin Dashboard</h2>
+      </div>
+
+      <section class="stats-grid">
+        <article class="stat-card">
+          <span>Total Tours</span>
+          <strong id="totalTours">0</strong>
+        </article>
+        <article class="stat-card">
+          <span>Total Bookings</span>
+          <strong id="totalBookings">0</strong>
+        </article>
+        <article class="stat-card">
+          <span>Pending</span>
+          <strong id="pendingBookings">0</strong>
+        </article>
+        <article class="stat-card">
+          <span>Revenue</span>
+          <strong id="totalRevenue">PKR 0</strong>
+        </article>
+      </section>
+
+      <section class="admin-grid">
+        <div class="panel">
+          <h3>Add Tour Package</h3>
+          <form id="tourForm" class="admin-form">
+            <input type="hidden" name="tourId" value="" />
+
+            <div class="form-row">
+              <label>
+                Tour Title
+                <input type="text" name="title" placeholder="5 Days Hunza Valley Exploration" required />
+              </label>
+              <label>
+                Category
+                <select name="category">
+                  <option value="Adventure">Adventure</option>
+                  <option value="Family">Family</option>
+                  <option value="Honeymoon">Honeymoon</option>
+                  <option value="Trekking">Trekking</option>
+                  <option value="Cultural">Cultural</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="form-row">
+              <label>
+                Duration
+                <input type="text" name="duration" placeholder="5 Days / 4 Nights" required />
+              </label>
+              <label>
+                Price (PKR)
+                <input type="number" name="price" placeholder="28000" required />
+              </label>
+            </div>
+
+            <label>
+              Location
+              <input type="text" name="location" placeholder="Hunza, Gilgit Baltistan" required />
+            </label>
+
+            <label>
+              Image URL
+              <input type="url" name="image" placeholder="https://images.unsplash.com/..." />
+            </label>
+
+            <label>
+              Highlights
+              <textarea name="highlights" placeholder="Karimabad, Attabad Lake, Passu Cones"></textarea>
+            </label>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Create Tour</button>
+              <button type="button" id="cancelEditTour" class="btn btn-secondary hidden">Cancel</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="panel">
+          <h3>Recent Bookings</h3>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Customer</th>
+                  <th>Tour</th>
+                  <th>Date</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="bookingsTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel full-width">
+        <h3>Tour Catalog</h3>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Category</th>
+                <th>Location</th>
+                <th>Duration</th>
+                <th>Price</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="tourTableBody"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script src="../assets/js/admin.js"></script>
+  </body>
+</html>

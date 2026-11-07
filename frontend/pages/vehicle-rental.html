@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Browse Quantum Travels vehicles for comfortable trips around Pakistan." />
+    <title>Quantum Travels | Vehicle Rental</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/theme.css" />
+    <script src="../assets/js/theme.js"></script>
+  </head>
+  <body>
+    <header class="site-header page-header">
+      <nav class="navbar container">
+        <a class="brand" href="homepage-5.html" aria-label="Quantum Travels home">
+          <img class="brand-logo brand-logo--dark" src="../assets/images/quantum-logo-dark.png" alt="Quantum Travels" />
+          <img class="brand-logo brand-logo--light" src="../assets/images/quantum-logo-light.png" alt="" aria-hidden="true" />
+        </a>
+        <div class="nav-links">
+          <a href="homepage-5.html">Home</a>
+          <a href="tour-grid-01.html">Tour Packages</a>
+          <a href="vehicle-rental.html" aria-current="page">Vehicle Rental</a>
+          <a href="aboutus.html">About Us</a>
+          <a href="contactus.html">Contact Us</a>
+          <button class="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Switch to dark mode" data-theme-toggle>
+            <span class="theme-toggle-label theme-toggle-label--light">Light</span>
+            <span class="theme-toggle-track" aria-hidden="true"><span class="theme-toggle-thumb"></span></span>
+            <span class="theme-toggle-label theme-toggle-label--dark">Dark</span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container page-shell vehicle-rental-page">
+      <section class="section">
+        <div class="section-heading">
+          <span class="eyebrow">Go your own way</span>
+          <h1>Vehicle Rental</h1>
+        </div>
+        <p class="vehicle-rental-intro">Find a comfortable ride for your next family trip, valley journey, or group getaway. Ask our team about availability and the right vehicle for your route.</p>
+        <div class="fleet-grid">
+          <article class="fleet-card">
+            <img class="vehicle-image" src="../assets/images/vehicle-hiace.jpg" alt="Toyota Hiace Grand Cabin" loading="lazy" decoding="async" />
+            <div class="vehicle-rental-card-content">
+              <span class="eyebrow">12 adults</span>
+              <h3>Toyota Hiace Grand Cabin</h3>
+              <p>Room for the whole group. Daily rates from PKR 12,000.</p>
+              <button class="btn btn-primary" type="button" data-vehicle-details data-vehicle-title="Toyota Hiace Grand Cabin" data-vehicle-capacity="12 adults" data-vehicle-price="PKR 12,000">View Details</button>
+            </div>
+          </article>
+          <article class="fleet-card">
+            <img class="vehicle-image" src="../assets/images/vehicle-fortuner.jpg" alt="Toyota Fortuner" loading="lazy" decoding="async" />
+            <div class="vehicle-rental-card-content">
+              <span class="eyebrow">6 adults</span>
+              <h3>Toyota Fortuner</h3>
+              <p>A comfortable SUV for long drives. Daily rates from PKR 16,000.</p>
+              <button class="btn btn-primary" type="button" data-vehicle-details data-vehicle-title="Toyota Fortuner" data-vehicle-capacity="6 adults" data-vehicle-price="PKR 16,000">View Details</button>
+            </div>
+          </article>
+          <article class="fleet-card">
+            <img class="vehicle-image" src="../assets/images/vehicle-coaster.jpg" alt="Toyota Saloon Coaster" loading="lazy" decoding="async" />
+            <div class="vehicle-rental-card-content">
+              <span class="eyebrow">21 adults</span>
+              <h3>Toyota Saloon Coaster</h3>
+              <p>Group travel with space to stretch out. Daily rates from PKR 18,000.</p>
+              <button class="btn btn-primary" type="button" data-vehicle-details data-vehicle-title="Toyota Saloon Coaster" data-vehicle-capacity="21 adults" data-vehicle-price="PKR 18,000">View Details</button>
+            </div>
+          </article>
+          <article class="fleet-card">
+            <img class="vehicle-image vehicle-image--zoom" src="../assets/images/honda-civic.jpg" alt="Honda Civic" loading="lazy" decoding="async" />
+            <div class="vehicle-rental-card-content">
+              <span class="eyebrow">5 adults</span>
+              <h3>Honda Civic</h3>
+              <p>A smooth ride for small groups. Daily rates from PKR 10,000.</p>
+              <button class="btn btn-primary" type="button" data-vehicle-details data-vehicle-title="Honda Civic" data-vehicle-capacity="5 adults" data-vehicle-price="PKR 10,000">View Details</button>
+            </div>
+          </article>
+          <article class="fleet-card">
+            <img class="vehicle-image vehicle-image--zoom" src="../assets/images/honda-city.jpg" alt="Honda City" loading="lazy" decoding="async" />
+            <div class="vehicle-rental-card-content">
+              <span class="eyebrow">5 adults</span>
+              <h3>Honda City</h3>
+              <p>A practical choice for city trips and couples. Daily rates from PKR 8,000.</p>
+              <button class="btn btn-primary" type="button" data-vehicle-details data-vehicle-title="Honda City" data-vehicle-capacity="5 adults" data-vehicle-price="PKR 8,000">View Details</button>
+            </div>
+          </article>
+          <article class="fleet-card">
+            <img class="vehicle-image" src="../assets/images/vehicle-sedan.jpg" alt="Toyota Corolla Altis" loading="lazy" decoding="async" />
+            <div class="vehicle-rental-card-content">
+              <span class="eyebrow">5 adults</span>
+              <h3>Toyota Corolla Altis</h3>
+              <p>Everyday comfort for the road. Daily rates from PKR 8,000–10,000.</p>
+              <button class="btn btn-primary" type="button" data-vehicle-details data-vehicle-title="Toyota Corolla Altis" data-vehicle-capacity="5 adults" data-vehicle-price="PKR 8,000 - 10,000">View Details</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <dialog class="vehicle-dialog" id="vehicleDialog" aria-labelledby="vehicleDialogTitle">
+        <div class="vehicle-dialog-content">
+          <button class="vehicle-dialog-close btn btn-secondary" type="button" data-close-vehicle-dialog>Close</button>
+          <span class="eyebrow">Vehicle rental</span>
+          <h2 id="vehicleDialogTitle" data-vehicle-detail-title></h2>
+          <p><strong>Capacity:</strong> <span data-vehicle-detail-capacity></span></p>
+          <p><strong>Daily rate:</strong> <span data-vehicle-detail-price></span></p>
+          <a class="btn btn-primary" href="tel:+923240049294">Call to inquire</a>
+        </div>
+      </dialog>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <img class="footer-brand-logo" src="../assets/images/quantum-logo-dark.png" alt="Quantum Travels" />
+          <p>Quality tour experiences for Pakistan and international destinations.</p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p>03240049294</p>
+          <p>mtaqeer777@gmail.com</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <p><a href="tour-grid-01.html">Tour Packages</a></p>
+          <p><a href="aboutus.html">About Us</a></p>
+          <p><a href="contactus.html">Contact</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../assets/js/app.js"></script>
+  </body>
+</html>
